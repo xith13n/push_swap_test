@@ -19,4 +19,8 @@ do
 done
 
 echo -e "\nLowest value: $min"
-echo "Highest value: $max"
+if (( max < 5500 )); then
+  echo -e "\e[32mHighest value: $max\e[0m"
+else
+  echo -e "\e[31mHighest value: $max\e[0m"
+fi
